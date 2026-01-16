@@ -1,37 +1,21 @@
 import { createFileRoute } from '@tanstack/react-router'
+import WalletInput from '@/components/WalletInput'
 import '../App.css'
 
-export const Route = createFileRoute('/')({ component: App })
-
-function App() {
-  return (
+export const Route = createFileRoute('/')({
+  component: () => (
     <div className="App">
       <header className="App-header">
-        <img
-          src="/tanstack-circle-logo.png"
-          className="App-logo"
-          alt="TanStack Logo"
-        />
-        <p>
-          Edit <code>src/routes/index.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="App-link"
-          href="https://tanstack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn TanStack
-        </a>
+        <h1>DLMM Wallet Tracker</h1>
+        <p className="subtitle">Track your Meteora DLMM positions on Solana</p>
+
+        <WalletInput />
+
+        <div className="description">
+          <p>Enter any Solana wallet address to view DLMM positions</p>
+          <p>No wallet connection required</p>
+        </div>
       </header>
     </div>
-  )
-}
+  ),
+})

@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "sessionId": "6c5eeee3-c7b1-45b8-978f-48229e907c93",
+  "status": "running",
+  "startedAt": "2026-01-16T06:54:44.067Z",
+  "updatedAt": "2026-01-16T06:54:49.796Z",
+  "currentIteration": 0,
+  "maxIterations": 10,
+  "tasksCompleted": 0,
+  "isPaused": false,
+  "agentPlugin": "claude",
+  "trackerState": {
+    "plugin": "json",
+    "prdPath": "./prd.json",
+    "totalTasks": 9,
+    "tasks": [
+      {
+        "id": "US-001",
+        "title": "Manual Wallet Input for Position Viewing",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-002",
+        "title": "Portfolio Summary at a Glance",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-003",
+        "title": "Browse Active DLMM Positions",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-004",
+        "title": "View Detailed Position Metrics",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-005",
+        "title": "Filter positions by Status",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-006",
+        "title": "Filter by Profitability",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-007",
+        "title": "Manual Refresh Data",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-008",
+        "title": "Mobile Responsive View",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-009",
+        "title": "Error Handling and Feedback",
+        "status": "open",
+        "completedInSession": false
+      }
+    ]
+  },
+  "iterations": [],
+  "skippedTaskIds": [],
+  "cwd": "/Users/pratamanurwijaya/Documents/Workspaces/Projects/dlmm-wallet-tracker",
+  "activeTaskIds": [
+    "US-001"
+  ],
+  "subagentPanelVisible": false
+}

@@ -1,81 +1,156 @@
 {
-  "productName": "Meteora DLMM Position Tracker",
-  "version": "1.0.0",
-  "lastUpdated": "2026-01-16",
-  "overview": "A desktop-only web application for tracking Meteora DLMM positions across multiple Solana wallets without requiring wallet connections.",
-  "features": {
-    "core": [
-      {
-        "name": "Manual Wallet Input",
-        "description": "Users manually add wallet addresses (no direct wallet connection required)"
-      },
-      {
-        "name": "Position Tracking", 
-        "description": "Display current position value, profit/loss metrics, and fees earned"
-      },
-      {
-        "name": "Historical Data",
-        "description": "Show performance charts and historical trends over time"
-      },
-      {
-        "name": "Auto-Refresh",
-        "description": "Automatically refresh data every 5 minutes"
-      },
-      {
-        "name": "Multi-Wallet Support",
-        "description": "Track unlimited wallets with custom labeling"
-      }
-    ],
-    "dataDisplay": [
-      {
-        "name": "Position Metrics",
-        "details": ["Current value", "P&L", "Fees earned", "Pool information"]
-      },
-      {
-        "name": "Performance Charts",
-        "details": ["Historical position values", "Fee accumulation over time"]
-      },
-      {
-        "name": "Real-time Updates",
-        "details": ["5-minute periodic data refresh via REST API calls"]
-      },
-      {
-        "name": "Position Details",
-        "details": ["Liquidity ranges", "Token pairs", "Pool participation status"]
-      }
-    ],
-    "multiWalletManagement": [
-      {
-        "name": "Wallet Grouping",
-        "description": "Label wallets (e.g., 'Trading Wallets', 'Long-term Holds')"
-      },
-      {
-        "name": "Portfolio Overview",
-        "description": "Combined view across all tracked wallets"
-      },
-      {
-        "name": "Individual Views",
-        "description": "Detailed breakdowns per wallet or wallet group"
-      },
-      {
-        "name": "Search/Filter",
-        "description": "Find specific wallets or positions quickly"
-      }
-    ]
-  },
-  "technicalRequirements": {
-    "dataSources": ["Meteora DLMM API", "Solana blockchain data"],
-    "updateFrequency": "5-minute intervals",
-    "localStorage": "Cache wallet addresses and basic position data",
-    "responsiveDesign": "Desktop-optimized layout",
-    "browserSupport": ["Chrome", "Firefox", "Safari", "Edge"]
-  },
-  "userInterface": {
-    "dashboard": "Overview of all tracked wallets and total portfolio metrics",
-    "walletManagement": "Add/remove wallets with custom labels",
-    "positionViewer": "Detailed position views with charts and historical data",
-    "settings": "Update preferences, manage wallet groups"
-  },
-  "targetPlatform": "Desktop web browsers only",
-  "priority": "High"
+  "name": "Meteora DLMM Position Viewer - Product Requirements Document",
+  "description": "DeFi users need a simple way to view and track their Meteora DLMM (Dynamic Liquidity Market Maker) positions across different wallets without connecting their wallets or granting permissions.",
+  "branchName": "feature/meteora-dlmm-position-viewer-product-requirements-document",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Manual Wallet Input for Position Viewing",
+      "description": "As a liquidity provider, I want to enter my wallet address manually to view positions, so I can check my portfolio without connecting my wallet.",
+      "acceptanceCriteria": [
+        "Input field accepts any valid Solana address",
+        "Validates address format before submission",
+        "Displays loading state while fetching",
+        "Shows clear error for invalid formats",
+        "No wallet permissions required"
+      ],
+      "priority": 1,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-002",
+      "title": "Portfolio Summary at a Glance",
+      "description": "As a user, I want to see my total portfolio value and P&L immediately after positions load, so I can quickly assess my financial status.",
+      "acceptanceCriteria": [
+        "Total value in USD displayed prominently",
+        "Total P&L amount and percentage shown",
+        "Calculations include all active positions",
+        "Updates when filtering positions",
+        "Visual indicators for profit/loss"
+      ],
+      "priority": 2,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-003",
+      "title": "Browse Active DLMM Positions",
+      "description": "As a user, I want to browse all my Meteora DLMM positions in a list view, so I can easily scan through my liquidity positions.",
+      "acceptanceCriteria": [
+        "Shows all positions in card format",
+        "Each card displays token pairs, value, and P&L",
+        "Consistent layout for each position",
+        "Expand option available for details",
+        "Cards stack vertically on mobile"
+      ],
+      "priority": 3,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-004",
+      "title": "View Detailed Position Metrics",
+      "description": "As a user, I want to expand position cards to see detailed metrics, so I can analyze individual position performance.",
+      "acceptanceCriteria": [
+        "Expand/collapse functionality on each card",
+        "Shows: fees earned, rewards, price range, position age",
+        "Load detailed data when expanded",
+        "Collapse also filters detailed view",
+        "Maintain card position when expanded"
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-005",
+      "title": "Filter positions by Status",
+      "description": "As a user, I want to filter my positions by active/inactive status, so I can focus on the most relevant positions.",
+      "acceptanceCriteria": [
+        "Filter toggle/dropdown available",
+        "\"Active\" shows only current positions",
+        "\"Inactive\" shows closed/withdrawn positions",
+        "Filter affects summary totals",
+        "Clear visual indication of filter applied"
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-006",
+      "title": "Filter by Profitability",
+      "description": "As a user, I want to filter positions by profitability, so I can quickly identify underperforming positions.",
+      "acceptanceCriteria": [
+        "Profitability filter with options: All, Profit, Loss",
+        "\"Profit\" shows only positive P&L positions",
+        "\"Loss\" shows only negative P&L positions",
+        "Updates portfolio summary accordingly",
+        "Easy to reset filter to \"All\""
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-007",
+      "title": "Manual Refresh Data",
+      "description": "As a user, I want a manual refresh button to update position data, so I can get the latest information.",
+      "acceptanceCriteria": [
+        "Refresh button always visible",
+        "Shows loading state during refresh",
+        "Updates all position data",
+        "Shows timestamp of last update",
+        "Does not clear filters or view preferences"
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-008",
+      "title": "Mobile Responsive View",
+      "description": "As a user, I want to view my positions on mobile devices, so I can check my portfolio anywhere.",
+      "acceptanceCriteria": [
+        "Mobile-friendly card layouts",
+        "Touch-friendly expand/collapse",
+        "No horizontal scrolling",
+        "All features work on mobile",
+        "Adapts to screen sizes < 768px"
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    },
+    {
+      "id": "US-009",
+      "title": "Error Handling and Feedback",
+      "description": "As a user, I want clear error messages when things go wrong, so I understand what happened and can retry.",
+      "acceptanceCriteria": [
+        "Clear message for invalid wallet addresses",
+        "User-friendly timeout messages",
+        "Network error explanations",
+        "No technical jargon",
+        "Retry suggestions provided"
+      ],
+      "priority": 4,
+      "passes": false,
+      "labels": [],
+      "dependsOn": []
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-01-16T06:54:31.843Z",
+    "version": "1.0.0",
+    "updatedAt": "2026-01-16T06:54:49.754Z"
+  }
 }
