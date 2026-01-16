@@ -1,0 +1,81 @@
+{
+  "productName": "Meteora DLMM Position Tracker",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-16",
+  "overview": "A desktop-only web application for tracking Meteora DLMM positions across multiple Solana wallets without requiring wallet connections.",
+  "features": {
+    "core": [
+      {
+        "name": "Manual Wallet Input",
+        "description": "Users manually add wallet addresses (no direct wallet connection required)"
+      },
+      {
+        "name": "Position Tracking", 
+        "description": "Display current position value, profit/loss metrics, and fees earned"
+      },
+      {
+        "name": "Historical Data",
+        "description": "Show performance charts and historical trends over time"
+      },
+      {
+        "name": "Auto-Refresh",
+        "description": "Automatically refresh data every 5 minutes"
+      },
+      {
+        "name": "Multi-Wallet Support",
+        "description": "Track unlimited wallets with custom labeling"
+      }
+    ],
+    "dataDisplay": [
+      {
+        "name": "Position Metrics",
+        "details": ["Current value", "P&L", "Fees earned", "Pool information"]
+      },
+      {
+        "name": "Performance Charts",
+        "details": ["Historical position values", "Fee accumulation over time"]
+      },
+      {
+        "name": "Real-time Updates",
+        "details": ["5-minute periodic data refresh via REST API calls"]
+      },
+      {
+        "name": "Position Details",
+        "details": ["Liquidity ranges", "Token pairs", "Pool participation status"]
+      }
+    ],
+    "multiWalletManagement": [
+      {
+        "name": "Wallet Grouping",
+        "description": "Label wallets (e.g., 'Trading Wallets', 'Long-term Holds')"
+      },
+      {
+        "name": "Portfolio Overview",
+        "description": "Combined view across all tracked wallets"
+      },
+      {
+        "name": "Individual Views",
+        "description": "Detailed breakdowns per wallet or wallet group"
+      },
+      {
+        "name": "Search/Filter",
+        "description": "Find specific wallets or positions quickly"
+      }
+    ]
+  },
+  "technicalRequirements": {
+    "dataSources": ["Meteora DLMM API", "Solana blockchain data"],
+    "updateFrequency": "5-minute intervals",
+    "localStorage": "Cache wallet addresses and basic position data",
+    "responsiveDesign": "Desktop-optimized layout",
+    "browserSupport": ["Chrome", "Firefox", "Safari", "Edge"]
+  },
+  "userInterface": {
+    "dashboard": "Overview of all tracked wallets and total portfolio metrics",
+    "walletManagement": "Add/remove wallets with custom labels",
+    "positionViewer": "Detailed position views with charts and historical data",
+    "settings": "Update preferences, manage wallet groups"
+  },
+  "targetPlatform": "Desktop web browsers only",
+  "priority": "High"
+}
