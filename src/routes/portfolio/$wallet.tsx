@@ -1,5 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
+import PortfolioSummary from '@/components/PortfolioSummary'
+import { Position } from '@/types/position'
 import './$wallet.css'
 
 export const Route = createFileRoute('/portfolio/$wallet')({
@@ -9,7 +11,7 @@ export const Route = createFileRoute('/portfolio/$wallet')({
 function PortfolioComponent() {
   const { wallet } = Route.useParams()
   const [isLoading, setIsLoading] = useState(true)
-  const [positions, setPositions] = useState<any[]>([])
+  const [positions, setPositions] = useState<Position[]>([])
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -24,7 +26,7 @@ function PortfolioComponent() {
         await new Promise(resolve => setTimeout(resolve, 1000))
 
         // Mock data - in a real implementation, this would come from an API
-        const mockPositions = [
+        const mockPositions: Position[] = [
           {
             id: '1',
             pool: 'SOL-USDC',
@@ -40,6 +42,30 @@ function PortfolioComponent() {
             deposited: '50 SOL',
             current: '48 SOL',
             pnl: '-2 SOL (-4%)',
+          },
+          {
+            id: '3',
+            pool: 'JUP-SOL',
+            range: '2% - 6%',
+            deposited: '200 SOL',
+            current: '225 SOL',
+            pnl: '+25 SOL (+12.5%)',
+          },
+          {
+            id: '4',
+            pool: 'USDC-USDT',
+            range: '0.05% - 0.2%',
+            deposited: '5000 USDC',
+            current: '5015 USDC',
+            pnl: '+15 USDC (+0.3%)',
+          },
+          {
+            id: '5',
+            pool: 'WIF-SOL',
+            range: '5% - 15%',
+            deposited: '30 SOL',
+            current: '25.5 SOL',
+            pnl: '-4.5 SOL (-15%)',
           },
         ]
 

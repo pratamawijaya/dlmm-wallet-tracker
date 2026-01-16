@@ -1,0 +1,84 @@
+.portfolio-summary {
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.total-value {
+  color: #1f2937;
+}
+
+.pnl-value,
+.pnl-percentage {
+  font-weight: 700;
+}
+
+.pnl-value.positive,
+.pnl-percentage.positive {
+  color: #10b981;
+}
+
+.pnl-value.negative,
+.pnl-percentage.negative {
+  color: #ef4444;
+}
+
+.positions-count {
+  color: #3b82f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .summary-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .summary-value {
+    font-size: 1.25rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .summary-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .summary-label {
+    color: #9ca3af;
+  }
+
+  .total-value {
+    color: #f9fafb;
+  }
+}
